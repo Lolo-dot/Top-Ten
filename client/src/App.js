@@ -33,8 +33,12 @@ function App() {
       for (const platform of PLATFORMS) {
         try {
           const [seriesRes, movieRes] = await Promise.all([
-            axios.get(`/api/shows/top/series/${platform.id}`),
-            axios.get(`/api/shows/top/movie/${platform.id}`),
+            axios.get(
+              `https://top-ten-backend.vercel.app/api/shows/top/series/${platform.id}`
+            ),
+            axios.get(
+              `https://top-ten-backend.vercel.app/api/shows/top/movie/${platform.id}`
+            ),
           ]);
           seriesResults[platform.name] = seriesRes.data;
           movieResults[platform.name] = movieRes.data;
