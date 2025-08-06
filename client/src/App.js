@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css"; // We'll add styles next
+import "./App.css";
 
 const platformLogos = {
   Netflix: "/netflix.png",
